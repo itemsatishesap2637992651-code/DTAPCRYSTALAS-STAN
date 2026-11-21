@@ -1,4 +1,4 @@
-
+id 'net.fabricmc.fabric-loom-remap' version '1.14.10'
 plugins {
     id 'net.fabricmc.fabric-loom-remap' version '1.14-SNAPSHOT'
 }
