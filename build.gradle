@@ -1,0 +1,34 @@
+
+plugins {
+    id 'net.fabricmc.fabric-loom-remap' version '1.14-SNAPSHOT'
+}
+
+version = '1.0.0'
+group = 'com.dtap'
+
+base {
+    archivesName = 'DTapCrystalAssist'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    minecraft 'com.mojang:minecraft:1.21.11'
+    mappings loom.officialMojangMappings()
+
+    modImplementation 'net.fabricmc:fabric-loader:0.18.4'
+    modImplementation 'net.fabricmc.fabric-api:fabric-api:0.141.1+1.21.11'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
+}
